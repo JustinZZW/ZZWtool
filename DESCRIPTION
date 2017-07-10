@@ -13,3 +13,6 @@ RoxygenNote: 6.0.1
 Suggests: knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://github.com/JustinZZW/ZZWtool
+BugReports:https://github.com/JustinZZW/ZZWtool/issues
+
