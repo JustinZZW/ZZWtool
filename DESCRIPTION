@@ -1,0 +1,15 @@
+Package: ZZWtool
+Title: ZZWtool: common tools in metabolomics data process
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Justin", "Zhou", email = "zhouzw@sioc.ac.cn", role = c("aut")),
+    person("Justin", "Zhou", email = "zhouzw@sioc.ac.cn", role = c("cre")))
+Description: Some tools were designed for daily data process, including format transformation, file processing.
+Depends: R (>= 3.3.2)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
