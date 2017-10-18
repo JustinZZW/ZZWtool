@@ -14,7 +14,7 @@ ZZW_EIC_plot <- function(raw.data,
   colnames(raw.data) <- c("Time", "Counts")
 
   if (is.null(rt.range)) {
-    rt.range <- c(0, max(raw.data$Time))
+    rt.range <- c(0, max(as.numeric(raw.data$Time)))
   }
 
   if (is.null(pic.name)) {
