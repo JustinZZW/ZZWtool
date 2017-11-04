@@ -7,13 +7,18 @@
 ZZWscale(raw.data, method = "auto")
 }
 \arguments{
-\item{raw.data}{A numeric matrix or data.frame}
+\item{raw.data}{A numeric matrix or data.frame.}
+
+\item{method}{Scale method: auto, auto scale; "mintmax", min-max scale.}
 }
 \value{
 scaling transformation of \code{raw.data}
 }
 \description{
 This is the function to complete scale transformation fot matrix or data.frame.
+}
+\details{
+it supports auto-scale or min
 }
 \examples{
 test.matrix <- matrix(1:100, ncol=10)
