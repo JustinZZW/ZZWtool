@@ -16,20 +16,24 @@
 ZZWscale <- function(raw.data, method = "auto"){
   if (method=="auto") {
     temp.data <- lapply(c(1:nrow(raw.data)), function(i){
-      temp.scale.data <- (raw.data[i,]-mean(raw.data[i,]))/sd(raw.data[i,])
+      temp <- as.numeric(raw.data[i,])
+      temp.scale.data <- (temp-mean(temp))/sd(temp)
     })
     # temp.result <- as.data.frame(do.call(rbind, temp.data))
     temp.result <- do.call(rbind, temp.data)
     row.names(temp.result) <- row.names(raw.data)
+    colnames(temp.result) <- colnames(raw.data)
   }
 
   if (method=="mintmax") {
     temp.data <- lapply(c(1:nrow(raw.data)), function(i){
-      temp.scale.data <- (raw.data[i,]-min(raw.data[i,]))/(max(raw.data[i,])-min(raw.data[i,]))
+      temp <- as.numeric(raw.data[i,])
+      temp.scale.data <- (temp-min(temp))/(max(temp)-min(temp))
     })
     # temp.result <- as.data.frame(do.call(rbind, temp.data))
     temp.result <- do.call(rbind, temp.data)
     row.names(temp.result) <- row.names(raw.data)
+    colnames(temp.result) <- colnames(raw.data)
   }
   return(temp.result)
 }
