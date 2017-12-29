@@ -1,7 +1,11 @@
 #' @title boxplot
 #' @description plot boxplot and plot p
-#' @author Justin Zhou
-#' @param x,y numeric vector
+#' @author Zhiwei Zhou
+#' \email{zhouzw@@sioca.ac.cn}
+#' @param raw.data data.frame table
+#' @param y the col name of y
+#' @param x the col name of x
+#' @param file.name pdf file name. Default: "boxplot.pdf"
 #' @examples
 #' test.data <- data.frame(a=seq(1:16), g=rep(c(1,2,3,4), each=4))
 #' ZZWboxplot(test.data, y="a", x="g", plot.point=T)
