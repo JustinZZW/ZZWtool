@@ -6,7 +6,7 @@
 #' @param rt.range The retention time range.
 #' @param color The color of line. Default is "dodgerblue".
 #' @export
-#'
+
 ZZW_EIC_plot <- function(raw.data,
                          pic.name=NULL,
                          rt.range=NULL,

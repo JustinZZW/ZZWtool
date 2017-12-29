@@ -6,6 +6,7 @@
 #' @param y the col name of y
 #' @param x the col name of x
 #' @param file.name pdf file name. Default: "boxplot.pdf"
+#' @export
 #' @examples
 #' test.data <- data.frame(a=seq(1:16), g=rep(c(1,2,3,4), each=4))
 #' ZZWboxplot(test.data, y="a", x="g", plot.point=T)

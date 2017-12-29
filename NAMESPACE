@@ -3,3 +3,5 @@
 export(ZZW_EIC_plot)
 export(ZZWscale)
 export(ZZWsetwd)
+export(ZZWboxplot)
+export(ZZWcolors)

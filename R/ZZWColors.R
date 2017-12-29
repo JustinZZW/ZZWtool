@@ -3,6 +3,7 @@
 #' @author Zhiwei Zhou
 #' {zhouzw@@sioc.ac.cn}
 #' @param name The name of color set. Contrast color: "contrast1", "contrast2", "contrast3", "contrast4". Sequential color: "seq_blue", "seq_red", "seq_green". Default: "contrast1"
+#' @export
 
 
 ZZWcolors <- function(name="contrast1"){
