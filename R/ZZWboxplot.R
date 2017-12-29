@@ -2,27 +2,47 @@
 #' @description plot boxplot and plot p
 #' @author Justin Zhou
 #' @param x,y numeric vector
-#' @export
+#' @examples
+#' test.data <- data.frame(a=seq(1:16), g=rep(c(1,2,3,4), each=4))
+#' ZZWboxplot(test.data, y="a", x="g", plot.point=T)
 
-ZZWboxplot <- function(x, y, lable.group, plot.point=T, figure="jepg", main.name){
+ZZWboxplot <- function(raw.data,
+                       y,
+                       x,
+                       file.name=NULL,
+                       plot.point=T,
+                       figure="pdf"){
 
   # pdf(file = paste(paste(rownames(lasso.data.identified)[i], "pdf", sep = "."), sep = "/") , width = 6, height = 6)
 
-  boxplot(as.numeric(x), as.numeric(y),
-          cex.lab = 1.8, cex.axis = 1.5,
-          col = c("lightseagreen", "salmon"),
-          # col = mycol,
-          # border = c("lightseagreen", "salmon"),
-          main = main.name,
-          cex.main = 1.8, names = lable.group, add = FALSE, outline = FALSE)
+  y <- raw.data[,which(colnames(raw.data)==y)]
+  x <- raw.data[,which(colnames(raw.data)==x)]
+
+  if (is.null(file.name)) {
+    file.name <- "boxplot.pdf"
+  } else {
+    file.name <- paste(file.name, "pdf", sep = ".")
+  }
+
+  pdf(file = file.name, width = 6, height = 6)
+  boxplot(y ~ x,
+          data = raw.data,
+          cex.lab = 1.8,
+          cex.axis = 1.5,
+          # col = ZZWcolors()[seq(unique(x))],
+          add = FALSE,
+          outline = FALSE)
 
   if (plot.point==T) {
-    beeswarm::beeswarm(x = list(as.numeric(x), as.numeric(y)),
-                       labels = F,add = TRUE, col = c("seagreen1", "brown"),
+    beeswarm::beeswarm(y ~ x,
+                       data = raw.data,
+                       labels = F,
+                       add = TRUE,
+                       col = ZZWcolors()[seq(unique(x))],
                        pch = 19)
   }
 
+  dev.off()
+
 }
-
-
 

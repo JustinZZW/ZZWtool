@@ -4,13 +4,18 @@
 \alias{ZZWboxplot}
 \title{boxplot}
 \usage{
-ZZWboxplot(x, y, lable.group, plot.point = T, figure = "jepg", main.name)
+ZZWboxplot(raw.data, y, x, file.name = NULL, plot.point = T,
+  figure = "pdf")
 }
 \arguments{
 \item{x, y}{numeric vector}
 }
 \description{
 plot boxplot and plot p
+}
+\examples{
+test.data <- data.frame(a=seq(1:16), g=rep(c(1,2,3,4), each=4))
+ZZWboxplot(test.data, y="a", x="g", plot.point=T)
 }
 \author{
 Justin Zhou
