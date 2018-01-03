@@ -2,7 +2,7 @@
 #' @description Some colors for plots
 #' @author Zhiwei Zhou
 #' {zhouzw@@sioc.ac.cn}
-#' @param name The name of color set. Contrast color: "contrast1", "contrast2", "contrast3", "contrast4". Sequential color: "seq_blue", "seq_red", "seq_green". Default: "contrast1"
+#' @param name The name of color set. Contrast color: "contrast1", "contrast2", "contrast3", "contrast4", "google". Sequential color: "seq_blue", "seq_red", "seq_green". Default: "contrast1"
 #' @export
 
 
@@ -22,6 +22,9 @@ ZZWcolors <- function(name="contrast1"){
          "contrast4"={
            # color.result <- c("#503C46", "#502800", "#002D46", "#5F5A19", "#003C32", "#23465A", "#5A3C00", "#000000")
            color.result <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+         },
+         "google"={
+           c("#4285F4", "#EA4335", "#FBBC05", "#34A853")
          },
          "seq_blue"={
            color.result <- c("#132B43", "#1A3855", "#214667", "#28547A", "#2F638E", "#3772A2", "#3E81B7", "#4691CC", "#4EA1E1", "#56B1F7")
