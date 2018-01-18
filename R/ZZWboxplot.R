@@ -14,6 +14,7 @@
 ZZWboxplot <- function(raw.data,
                        y,
                        x,
+                       main="",
                        file.name=NULL,
                        plot.point=T,
                        figure="pdf"){
@@ -32,6 +33,7 @@ ZZWboxplot <- function(raw.data,
   pdf(file = file.name, width = 6, height = 6)
   boxplot(y ~ x,
           data = raw.data,
+          main = main,
           cex.lab = 1.8,
           cex.axis = 1.5,
           # col = ZZWcolors()[seq(unique(x))],
