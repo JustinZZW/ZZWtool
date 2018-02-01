@@ -2,12 +2,12 @@
 % Please edit documentation in R/ZZWColors.R
 \name{ZZWcolors}
 \alias{ZZWcolors}
-\title{ZZWcolor}
+\title{ZZWcolors}
 \usage{
 ZZWcolors(name = "contrast1")
 }
 \arguments{
-\item{name}{The name of color set. Contrast color: "contrast1", "contrast2", "contrast3", "contrast4". Sequential color: "seq_blue", "seq_red", "seq_green". Default: "contrast1"}
+\item{name}{The name of color set. Contrast color: "contrast1", "contrast2", "contrast3", "contrast4", "google". Sequential color: "seq_blue", "seq_red", "seq_green". Default: "contrast1"}
 }
 \description{
 Some colors for plots

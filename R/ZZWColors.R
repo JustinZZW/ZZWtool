@@ -1,4 +1,4 @@
-#' @title ZZWcolor
+#' @title ZZWcolors
 #' @description Some colors for plots
 #' @author Zhiwei Zhou
 #' {zhouzw@@sioc.ac.cn}

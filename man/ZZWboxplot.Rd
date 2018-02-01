@@ -4,11 +4,17 @@
 \alias{ZZWboxplot}
 \title{boxplot}
 \usage{
-ZZWboxplot(raw.data, y, x, file.name = NULL, plot.point = T,
+ZZWboxplot(raw.data, y, x, main = "", file.name = NULL, plot.point = T,
   figure = "pdf")
 }
 \arguments{
-\item{x, y}{numeric vector}
+\item{raw.data}{data.frame table}
+
+\item{y}{the col name of y}
+
+\item{x}{the col name of x}
+
+\item{file.name}{pdf file name. Default: "boxplot.pdf"}
 }
 \description{
 plot boxplot and plot p
@@ -18,5 +24,6 @@ test.data <- data.frame(a=seq(1:16), g=rep(c(1,2,3,4), each=4))
 ZZWboxplot(test.data, y="a", x="g", plot.point=T)
 }
 \author{
-Justin Zhou
+Zhiwei Zhou
+\email{zhouzw@sioca.ac.cn}
 }
