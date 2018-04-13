@@ -10,7 +10,8 @@
 ZZW_EIC_plot <- function(raw.data,
                          pic.name=NULL,
                          rt.range=NULL,
-                         color="dodgerblue"){
+                         color="dodgerblue",
+                         is.output = TRUE){
   colnames(raw.data) <- c("Time", "Counts")
 
   if (is.null(rt.range)) {
@@ -25,7 +26,9 @@ ZZW_EIC_plot <- function(raw.data,
 
   max.count <- max(as.numeric(raw.data$Counts))
 
-  pdf(file = pic.name, width = 6, height = 4)
+  if (is.output) {
+    pdf(file = pic.name, width = 6, height = 4)
+  }
 
   plot(as.numeric(raw.data$Time),
        as.numeric(raw.data$Counts)/max.count, type = "l", lwd=2, xlab = "Retention time (s)",
@@ -42,6 +45,8 @@ ZZW_EIC_plot <- function(raw.data,
 
   box()
 
-  dev.off()
+  if (is.output) {
+    dev.off()
+  }
 
 }
