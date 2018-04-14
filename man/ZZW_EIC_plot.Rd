@@ -5,7 +5,7 @@
 \title{ZZW_EIC_plot}
 \usage{
 ZZW_EIC_plot(raw.data, pic.name = NULL, rt.range = NULL,
-  color = "dodgerblue")
+  color = "dodgerblue", is.output = TRUE)
 }
 \arguments{
 \item{raw.data}{The 2 column data.frame. The column_1 represents time, and column_2 represents counts.}
