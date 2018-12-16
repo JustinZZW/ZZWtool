@@ -46,7 +46,7 @@ ZZWCylicBarplot <- function(raw_data,
                   # label2=superclass_label_2,
                   angle = 90 - 360 * (id - 0.5) / dplyr::n())
 
-  raw_data  %>%
+  cylic_barplot <- raw_data  %>%
     ggplot2::ggplot(ggplot2::aes(factor(id), frequency, fill = label, label = label)) +
     ggplot2::geom_bar(stat = 'identity', position = 'dodge') +
     ggplot2::geom_text(hjust = 0,
@@ -63,9 +63,12 @@ ZZWCylicBarplot <- function(raw_data,
   # guides(fill = TRUE)
 
   if (is_output) {
-    ggsave(filename = file_name,
-           width = 6,
-           height = 6)
+    ggplot2::ggsave(plot = cylic_barplot,
+                    filename = file_name,
+                    width = 6,
+                    height = 6)
   }
+
+  cylic_barplot
 
 }
