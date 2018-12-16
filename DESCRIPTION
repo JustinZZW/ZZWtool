@@ -9,10 +9,12 @@ Depends: R (>= 3.1.2)
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0
 Suggests: knitr,
     rmarkdown
 VignetteBuilder: knitr
 URL: https://github.com/JustinZZW/ZZWtool
-BugReports:https://github.com/JustinZZW/ZZWtool/issues
-
+BugReports: https://github.com/JustinZZW/ZZWtool/issues
+Imports: 
+    ggplot2,
+    dplyr

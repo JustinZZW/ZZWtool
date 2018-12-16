@@ -4,8 +4,8 @@
 \alias{ZZWboxplot}
 \title{boxplot}
 \usage{
-ZZWboxplot(raw.data, y, x, main = "", file.name = NULL, plot.point = T,
-  figure = "pdf")
+ZZWboxplot(raw.data, y, x, main = "", file.name = NULL,
+  plot.point = T, figure = "pdf")
 }
 \arguments{
 \item{raw.data}{data.frame table}
