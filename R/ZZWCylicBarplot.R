@@ -5,6 +5,7 @@
 #' @param max_radius max radius of cycle
 #' @param is.output Default: FALSE
 #' @importFrom magrittr '%>%'
+#' @export
 #' @examples
 #' raw_data <- seq(10,1)
 #' names(raw_data) <- letters[1:10]

@@ -7,6 +7,7 @@
 #' @param file.name Picture name. Default: "MSMS"
 #' @param dir.path output path. Default: current directory.
 #' @param pg.format Output picture format, including "pdf", "png". Default: "pdf"
+#' @export
 #' @examples
 #' exp.spec <- data.frame(mz=c(78, 96, 107, 134, 158), int=c(1338,74,74,522,98))
 #' std.spec <- data.frame(mz=c(78, 96, 107, 134, 158), int=c(3845,169,258,610,516))
