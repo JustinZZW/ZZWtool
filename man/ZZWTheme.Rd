@@ -11,6 +11,9 @@ ggplot theme
 }
 \examples{
 mydata <- data.frame(
+ Lebal  = c("linerange1","linerange2","linerange3","linerange4","linerange5"),
+ xstart = c(3.5,7,12,16,20),
+ ymin   = c(2.5,6.5,3,4.5,3.8),
  ymax   = c(7.5,9.5,9,13.5,4.2),
  class  = c("A","A","A","C","C")
 )
