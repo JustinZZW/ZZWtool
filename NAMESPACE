@@ -2,6 +2,7 @@
 
 export(ZZWCylicBarplot)
 export(ZZWPointplot)
+export(ZZWTheme)
 export(ZZW_EIC_plot)
 export(ZZW_MSMS_plot)
 export(ZZWboxplot)
