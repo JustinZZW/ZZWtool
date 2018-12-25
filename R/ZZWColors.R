@@ -2,7 +2,7 @@
 #' @description Some colors for plots
 #' @author Zhiwei Zhou
 #' {zhouzw@@sioc.ac.cn}
-#' @param name The name of color set. Contrast color: "contrast1", "contrast2", "contrast3", "contrast4", "google". Sequential color: "seq_blue", "seq_red", "seq_green". Default: "contrast1"
+#' @param name The name of color set. Contrast color: "contrast1", "contrast2", "contrast3", "contrast4", "google", "ggplot20". Sequential color: "seq_blue", "seq_red", "seq_green". Default: "contrast1"
 #' @export
 
 
@@ -23,6 +23,11 @@ ZZWcolors <- function(name="contrast1"){
            # color.result <- c("#503C46", "#502800", "#002D46", "#5F5A19", "#003C32", "#23465A", "#5A3C00", "#000000")
            color.result <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
          },
+         "ggplot20"={
+           # color.result <- c("#503C46", "#502800", "#002D46", "#5F5A19", "#003C32", "#23465A", "#5A3C00", "#000000")
+           color.result <- c("#F8766D", "#EA8331", "#D89000", "#C09B00", "#A3A500", "#7CAE00", "#39B600", "#00BB4E", '#00BF7D', '#00C1A3', '#00BFC4', '#00BAE0', '#00B0F6', '#35A2FF', '#9590FF', '#C77CFF', '#E76BF3', '#FA62DB', '#FF62BC', '#FF6A98')
+         },
+
          "google"={
            c("#4285F4", "#EA4335", "#FBBC05", "#34A853")
          },

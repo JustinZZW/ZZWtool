@@ -7,7 +7,7 @@
 ZZWcolors(name = "contrast1")
 }
 \arguments{
-\item{name}{The name of color set. Contrast color: "contrast1", "contrast2", "contrast3", "contrast4", "google". Sequential color: "seq_blue", "seq_red", "seq_green". Default: "contrast1"}
+\item{name}{The name of color set. Contrast color: "contrast1", "contrast2", "contrast3", "contrast4", "google", "ggplot20". Sequential color: "seq_blue", "seq_red", "seq_green". Default: "contrast1"}
 }
 \description{
 Some colors for plots
