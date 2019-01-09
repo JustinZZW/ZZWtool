@@ -1,6 +1,6 @@
 Package: ZZWtool
 Title: ZZWtool: common tools in metabolomics data process
-Version: 0.0.0.9005
+Version: 0.0.0.9006
 Authors@R: c(
     person("Justin", "Zhou", email = "zhouzw@sioc.ac.cn", role = c("aut")),
     person("Justin", "Zhou", email = "zhouzw@sioc.ac.cn", role = c("cre")))
@@ -17,4 +17,6 @@ URL: https://github.com/JustinZZW/ZZWtool
 BugReports: https://github.com/JustinZZW/ZZWtool/issues
 Imports: 
     ggplot2,
-    dplyr
+    dplyr,
+    grid,
+    grDevices
