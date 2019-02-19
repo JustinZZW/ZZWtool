@@ -12,6 +12,8 @@ ZZWVennPlot(raw_data, height = 6, width = 6,
 
 \item{height}{Default: 6}
 
+\item{colour_type}{Please ref ZZWColors}
+
 \item{filename}{Default: test}
 
 \item{weight}{Default: 6}
