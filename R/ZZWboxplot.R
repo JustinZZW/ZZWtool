@@ -17,6 +17,7 @@ ZZWboxplot <- function(raw.data,
                        main="",
                        file.name=NULL,
                        plot.point=T,
+                       is.output=T,
                        figure="pdf"){
 
   # pdf(file = paste(paste(rownames(lasso.data.identified)[i], "pdf", sep = "."), sep = "/") , width = 6, height = 6)
@@ -30,7 +31,10 @@ ZZWboxplot <- function(raw.data,
     file.name <- paste(file.name, "pdf", sep = ".")
   }
 
-  pdf(file = file.name, width = 6, height = 6)
+  if (is.output) {
+    pdf(file = file.name, width = 6, height = 6)
+  }
+
   boxplot(y ~ x,
           data = raw.data,
           main = main,
@@ -49,7 +53,9 @@ ZZWboxplot <- function(raw.data,
                        pch = 19)
   }
 
-  dev.off()
+  if (is.output) {
+    dev.off()
+  }
 
 }
 
