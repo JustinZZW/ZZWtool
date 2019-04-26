@@ -20,4 +20,5 @@ Imports:
     dplyr,
     grid,
     grDevices,
-    impute
+    impute,
+    pheatmap
