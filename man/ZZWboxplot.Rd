@@ -5,7 +5,7 @@
 \title{boxplot}
 \usage{
 ZZWboxplot(raw.data, y, x, main = "", file.name = NULL,
-  plot.point = T, figure = "pdf")
+  plot.point = T, is.output = T, figure = "pdf")
 }
 \arguments{
 \item{raw.data}{data.frame table}
