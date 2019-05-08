@@ -50,7 +50,7 @@ setGeneric(name = 'ZZWzscore',
                           type=c('by_row', 'by_column')){
 
              type <- match.arg(type)
-             method <- match.arg(method)
+             # method <- match.arg(method)
 
              if (type=='by_column') {
                temp_mean <- apply(raw_data, 2, mean)
