@@ -1,9 +1,10 @@
 Package: ZZWtool
 Title: ZZWtool: common tools in metabolomics data process
-Version: 0.0.0.9009
+Version: 0.0.0.9012
 Authors@R: c(
-    person("Justin", "Zhou", email = "zhouzw@sioc.ac.cn", role = c("aut")),
-    person("Justin", "Zhou", email = "zhouzw@sioc.ac.cn", role = c("cre")))
+    person("Justin", "Zhou", email = "zhouzw@sioc.ac.cn", role = c("aut", "cre"),
+    comment = c(ORCID = "0000-0002-1249-6870")
+    ))
 Description: Some tools were designed for daily data process, including format transformation, file processing.
 Depends: R (>= 3.1.2)
 License: GPL-3
@@ -21,4 +22,5 @@ Imports:
     grid,
     grDevices,
     impute,
-    pheatmap
+    pheatmap,
+    magrittr
