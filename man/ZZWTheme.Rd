@@ -4,7 +4,10 @@
 \alias{ZZWTheme}
 \title{ZZWTheme}
 \usage{
-ZZWTheme(type = "common")
+ZZWTheme(type = c("common", "classic"))
+}
+\arguments{
+\item{type:}{'common', 'classic'}
 }
 \description{
 ggplot theme
@@ -22,6 +25,11 @@ test <- ggplot(mydata) +
 test
 mytheme <- ZZWTheme()
 test + mytheme
+mytheme2 <- ZZWTheme('classic')
+test +
+  mytheme2 +
+  theme(axis.text.y = ggplot2::element_text(size = 10, angle = 0,
+                                            colour = 'black'))
 }
 \author{
 Zhiwei Zhou

@@ -1,6 +1,6 @@
 Package: ZZWtool
 Title: ZZWtool: common tools in metabolomics data process
-Version: 0.0.0.9012
+Version: 0.0.0.9013
 Authors@R: c(
     person("Justin", "Zhou", email = "zhouzw@sioc.ac.cn", role = c("aut", "cre"),
     comment = c(ORCID = "0000-0002-1249-6870")

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ZZWzcore — ZZWzscore • ZZWtool</title>
+<title>ZZWVolcanoPlot — ZZWVolcanoPlot • ZZWtool</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="ZZWzcore — ZZWzscore" />
+<meta property="og:title" content="ZZWVolcanoPlot — ZZWVolcanoPlot" />
 
-<meta property="og:description" content="ZZWzcore" />
+<meta property="og:description" content="ZZWVolcanoPlot" />
 
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
@@ -107,39 +107,53 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>ZZWzcore</h1>
-    <small class="dont-index">Source: <a href='https://github.com/JustinZZW/ZZWtool/blob/master/R/ZZWscale.R'><code>R/ZZWscale.R</code></a></small>
-    <div class="hidden name"><code>ZZWzscore.Rd</code></div>
+    <h1>ZZWVolcanoPlot</h1>
+    <small class="dont-index">Source: <a href='https://github.com/JustinZZW/ZZWtool/blob/master/R/ZZWVolcanoPlot.R'><code>R/ZZWVolcanoPlot.R</code></a></small>
+    <div class="hidden name"><code>ZZWVolcanoPlot.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>ZZWzcore</p>
+    <p>ZZWVolcanoPlot</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>ZZWzscore</span>(<span class='no'>raw_data</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"by_row"</span>, <span class='st'>"by_column"</span>))</pre>
+    <pre class="usage"><span class='fu'>ZZWVolcanoPlot</span>(<span class='no'>raw_data</span>, <span class='kw'>p_cutoff</span> <span class='kw'>=</span> <span class='fl'>0.05</span>, <span class='kw'>fc_cutoff</span> <span class='kw'>=</span> <span class='fl'>1.25</span>,
+  <span class='kw'>log_tran</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"log2"</span>, <span class='st'>"log10"</span>))</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>raw_data</th>
-      <td><p>a matrix or data.frame in numeric</p></td>
+      <td><p>1st column: feautre name; 2nd column: p_values; 3rd column: fold_changes</p></td>
     </tr>
     <tr>
-      <th>type</th>
-      <td><p>"by_column" or "by_row". Default: "by_row"</p></td>
+      <th>p_cutoff</th>
+      <td><p>the p cutoff of significant; All p-values would be -log10 transformated in the plot. Default: 0.05</p></td>
+    </tr>
+    <tr>
+      <th>fc_cutoff</th>
+      <td><p>the fold change cutoff of significant: Default: 1.25</p></td>
+    </tr>
+    <tr>
+      <th>log_tran</th>
+      <td><p>log_tranformation method for fold change, "log2" or "log10". Default: log2</p></td>
     </tr>
     </table>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/data'>data</a></span>(<span class='st'>'stat_result'</span>)
+<span class='fu'>ZZWVolcanoPlot</span>(<span class='kw'>raw_data</span> <span class='kw'>=</span> <span class='no'>stat_result</span>, <span class='kw'>p_cutoff</span> <span class='kw'>=</span> <span class='fl'>0.05</span>, <span class='kw'>fc_cutoff</span> <span class='kw'>=</span> <span class='fl'>1.25</span>, <span class='kw'>log_tran</span> <span class='kw'>=</span> <span class='st'>'log2'</span>)</div><div class='img'><img src='ZZWVolcanoPlot-1.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-                </ul>
+            
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
     <h2>Author</h2>
     <p>Zhiwei Zhou</p>
